@@ -97,6 +97,7 @@
         <div class="card text-center shadow-sm p-3" onclick="window.location.href='estagiarios.html'">
           <div class="icon text-primary"><i class="bi bi-mortarboard-fill"></i></div>
           <h6 class="fw-semibold">Estagiários</h6>
+          <p class="text-muted mb-0">Total: <strong> {{ count($estagiarios) }}</strong></p>
         </div>
       </div>
 
@@ -104,6 +105,8 @@
         <div class="card text-center shadow-sm p-3" onclick="window.location.href='departamentos.html'">
           <div class="icon text-success"><i class="bi bi-building-check"></i></div>
           <h6 class="fw-semibold">Supervisor</h6>
+            <p class="text-muted mb-0">Total: <strong>20</strong></p>
+        
         </div>
       </div>
 
@@ -111,6 +114,7 @@
   <div class="card text-center shadow-sm p-3" onclick="window.location.href='departamentos.html'">
     <div class="icon text-success"><i class="bi bi-building"></i></div>
     <h6 class="fw-semibold">Departamentos</h6>
+      <p class="text-muted mb-0">Total: <strong> 9 </strong></p>
   </div>
 </div>
 

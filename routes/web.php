@@ -3,9 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\EstagiarioController;
+use App\Models\Estagiario;
 
 Route::get('/welcome', function () {
-    return view('welcome');
+    return view('welcome', ['estagiarios' => Estagiario::all()]);
 });
 
 Route::get('/estagio', function () {
@@ -32,7 +33,7 @@ Route::put('/estagiario/{id}/editar', [App\Http\Controllers\EstagiarioController
 
 
 
-Route::put('/estagiario/{id}/encerrar', [App\Http\Controllers\EstagiarioController::class, 'encerrar'])->name('estagiario.encerrar');
+//Route::put('/estagiario/{id}/encerrar', [App\Http\Controllers\EstagiarioController::class, 'encerrar'])->name('estagiario.encerrar');
 
 Route::get('/estagiario/historico', [App\Http\Controllers\EstagiarioController::class, 'historico'])->name('estagiario.historico');
 
