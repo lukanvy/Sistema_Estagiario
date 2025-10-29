@@ -17,8 +17,6 @@ Route::get('/FE', function () {
       return view('FormEstagiario');
 });
 
-// Listagem
-Route::get('/estagiario', [EstagiarioController::class, 'index'])->name('estagiario.index');
 
 // Formulário de cadastro
 Route::get('/estagiario/create', [EstagiarioController::class, 'create'])->name('estagiario.create');
@@ -27,14 +25,21 @@ Route::get('/estagiario/create', [EstagiarioController::class, 'create'])->name(
 //ddd("hello word");
 Route::post('/estagiario', [EstagiarioController::class, 'store'])->name('estagiario.store');
 
+//tabela dos estagiarios
+Route::get('/list', [EstagiarioController::class, 'index'])->name('estagiario.index');
+
+
+
 Route::resource('estagiario', EstagiarioController::class);
 
-Route::put('/estagiario/{id}/editar', [App\Http\Controllers\EstagiarioController::class, 'encerrar'])->name('estagiario.encerrar');
+Route::get('/estagiarios/{id}/edit', [EstagiarioController::class, 'edit'])->name('estagiarios.edit');
 
 
+Route::put('/estagiarios/{id}', [EstagiarioController::class, 'update'])->name('estagiarios.update');
 
-//Route::put('/estagiario/{id}/encerrar', [App\Http\Controllers\EstagiarioController::class, 'encerrar'])->name('estagiario.encerrar');
 
-Route::get('/estagiario/historico', [App\Http\Controllers\EstagiarioController::class, 'historico'])->name('estagiario.historico');
+Route::put('/detalhe', [EstagiarioController::class, 'show'])->name('estagiario.show');
 
-Route::get('/dashboard', [App\Http\Controllers\EstagiarioController::class, 'dashboard'])->name('dashboard');
+//Route::get('/estagiario/historico', [EstagiarioController::class, 'historico'])->name('estagiario.historico');
+
+//Route::get('/dashboard', [EstagiarioController::class, 'dashboard'])->name('dashboard');

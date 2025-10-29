@@ -22,7 +22,7 @@ class EstagiarioController extends Controller
 }
 
     /**
-     * Mostra o formulário de cadastro de estagiário.
+    * formulário de cadastro
      */
     public function create()
     {
@@ -30,7 +30,7 @@ class EstagiarioController extends Controller
     }
 
     /**
-     * Salva um novo estagiário no banco de dados.
+     * Salva um novo estagiário na bd.
      */
     public function store(Request $request)
     {
@@ -54,9 +54,6 @@ class EstagiarioController extends Controller
         return redirect()->route('estagiario.index')->with('success', 'Estagiário cadastrado com sucesso!');
     }
 
-    /**
-     * Mostra o formulário de edição de um estagiário existente.
-     */
     public function edit($id)
     {
         $estagiario = Estagiario::findOrFail($id);
@@ -64,7 +61,7 @@ class EstagiarioController extends Controller
     }
 
     /**
-     * Atualiza os dados do estagiário no banco.
+     * Atualiza os dados do estagiário bd.
      */
     public function update(Request $request, $id)
     {
@@ -91,7 +88,7 @@ class EstagiarioController extends Controller
     }
 
     /**
-     * Remove um estagiário do banco de dados.
+     * Remove um estagiário do bd.
      */
     public function destroy($id)
     {
@@ -116,6 +113,12 @@ public function dashboard()
 
     return view('dashboard', compact('totalEstagiariosAtivos', 'totalSupervisores', 'totalEncerrados'));
 }
+public function show($id)
+{
+    $estagiario = Estagiario::findOrFail($id);
+    return view('estagiario.show', compact('estagiario'));
+}
+
 
 
 }
