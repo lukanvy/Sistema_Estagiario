@@ -1,0 +1,209 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Background personalizado */
+.bg-gradient-blue {
+    @apply bg-gradient-to-br from-blue-50 to-gray-100;
+}
+
+/* Sidebar */
+.sidebar {
+    @apply w-64 bg-gradient-to-b from-blue-700 to-blue-800 text-white fixed h-screen p-6 shadow-xl;
+}
+
+.sidebar-header {
+    @apply text-center mb-8;
+}
+
+.logo-container {
+    @apply w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-3;
+}
+
+.logo-icon {
+    @apply text-blue-700 text-xl font-bold;
+}
+
+.sidebar-title {
+    @apply text-lg font-bold;
+}
+
+.sidebar-nav {
+    @apply space-y-2;
+}
+
+.sidebar-link {
+    @apply flex items-center py-3 px-4 rounded-lg text-sm transition-all duration-200 border-l-4 border-transparent hover:bg-blue-900/30;
+}
+
+.sidebar-link.active {
+    @apply bg-blue-900/50 border-white;
+}
+
+/* Conteúdo principal */
+.main-content {
+    @apply ml-64 p-8 w-full;
+}
+
+.page-header {
+    @apply flex justify-between items-center mb-8;
+}
+
+.header-title {
+    @apply flex-1;
+}
+
+.page-title {
+    @apply text-2xl font-bold text-gray-800;
+}
+
+.page-subtitle {
+    @apply text-gray-600;
+}
+
+/* Dropdown */
+.dropdown-container {
+    @apply relative inline-block;
+}
+
+.admin-dropdown-btn {
+    @apply bg-blue-600 text-white font-medium px-4 py-2.5 rounded-lg shadow-md flex items-center space-x-2 hover:bg-blue-700 hover:shadow-lg transition-all;
+}
+
+.dropdown-menu {
+    @apply hidden absolute right-0 mt-2 w-48 bg-white shadow-xl rounded-lg overflow-hidden border border-gray-100 z-10;
+}
+
+.dropdown-item {
+    @apply flex items-center px-4 py-3 text-gray-700 hover:bg-blue-50 transition;
+}
+
+.dropdown-divider {
+    @apply border-gray-200 my-1;
+}
+
+.dropdown-item.logout {
+    @apply text-red-600 hover:bg-red-50;
+}
+
+/* Cabeçalho da universidade */
+.university-header {
+    @apply text-center mb-8;
+}
+
+.logo-wrapper {
+    @apply inline-flex items-center justify-center w-20 h-20 bg-white rounded-full shadow-lg mb-4;
+}
+
+.university-logo {
+    @apply w-12 h-12 rounded-full;
+}
+
+.university-title {
+    @apply text-2xl font-bold text-blue-800;
+}
+
+.university-subtitle {
+    @apply text-gray-600 mt-1;
+}
+
+/* Container do formulário */
+.form-container {
+    @apply bg-white rounded-2xl shadow-xl p-8 border border-gray-100;
+}
+
+.form-header {
+    @apply flex items-center mb-6;
+}
+
+.form-icon {
+    @apply w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mr-4;
+}
+
+.form-icon i {
+    @apply text-blue-600 text-lg;
+}
+
+.form-title {
+    @apply text-xl font-semibold text-gray-800;
+}
+
+.form-subtitle {
+    @apply text-gray-500 text-sm;
+}
+
+/* Formulário */
+.estagiario-form {
+    @apply space-y-6;
+}
+
+.form-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6;
+}
+
+.form-group.large {
+    @apply lg:col-span-10;
+}
+
+.form-group.medium {
+    @apply lg:col-span-4 md:col-span-2;
+}
+
+.form-group.small {
+    @apply lg:col-span-2;
+}
+
+.form-group.full {
+    @apply col-span-full;
+}
+
+.form-label {
+    @apply block text-sm font-medium text-gray-700 mb-2;
+}
+
+.input-container {
+    @apply relative;
+}
+
+.input-icon {
+    @apply absolute left-3 top-3 text-gray-400;
+}
+
+.textarea-icon {
+    @apply top-4;
+}
+
+.form-input {
+    @apply w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition;
+}
+
+.form-input.with-icon {
+    @apply pl-10;
+}
+
+/* REMOVI a linha problemática - em vez de @apply text-center, usa diretamente no HTML */
+.textarea {
+    @apply resize-none;
+}
+
+.file-input {
+    @apply file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100;
+}
+
+/* Botões do formulário */
+.form-actions {
+    @apply flex justify-end gap-3 pt-6 border-t border-gray-200;
+}
+
+.btn-cancel {
+    @apply bg-gray-400 text-white font-medium px-6 py-3 rounded-lg shadow hover:bg-gray-500 hover:shadow-md transition-all flex items-center;
+}
+
+.btn-submit {
+    @apply bg-green-600 text-white font-medium px-6 py-3 rounded-lg shadow hover:bg-green-700 hover:shadow-md transition-all flex items-center;
+}
+
+/* Estados e utilidades */
+.hidden {
+    display: none;
+}

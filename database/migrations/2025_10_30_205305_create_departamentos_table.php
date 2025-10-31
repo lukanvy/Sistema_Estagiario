@@ -9,21 +9,19 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-   public function up(): void
-{
-    Schema::table('estagiarios', function (Blueprint $table) {
-        $table->string('status')->default('Ativo')->after('carta');
-    });
-}
-
+    public function up(): void
+    {
+        Schema::create('departamentos', function (Blueprint $table) {
+            $table->id();
+            $table->timestamps();
+        });
+    }
 
     /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-        Schema::table('estagiarios', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('departamentos');
     }
 };
