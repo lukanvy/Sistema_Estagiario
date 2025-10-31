@@ -8,7 +8,7 @@ return new class extends Migration
 {
     public function up(): void
     {
-        Schema::create('EstagiarioController', function (Blueprint $table) {
+        Schema::create('estagiarios', function (Blueprint $table) {
             $table->id();
             $table->string('nome_completo');
             $table->string('curso');
@@ -22,10 +22,10 @@ return new class extends Migration
             $table->text('observacoes')->nullable();
             $table->timestamps();
         });
-    } 
+    }
 
     public function down(): void
     {
-        Schema::dropIfExists('EstagiarioController');
+        Schema::dropIfExists('estagiarios');
     }
 };

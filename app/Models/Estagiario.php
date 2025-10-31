@@ -20,6 +20,8 @@ class Estagiario extends Model
         'alocacao',
         'data_inicio',
         'data_fim',
-        'observacoes'
+        'observacoes',
+        'carta',
+        'status',
     ];
 }
